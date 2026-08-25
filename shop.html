@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop Aurelia minimalist essentials.">
+  <title>Shop — Aurelia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div data-site-header></div>
+  <main>
+    <section class="page-hero">
+      <div class="container"><p class="eyebrow">The collection</p><h1>Shop all</h1><p class="lead">Clothing, accessories, footwear, and lifestyle essentials with a quiet, modern point of view.</p></div>
+    </section>
+
+    <section class="container shop-layout" aria-label="Product catalog">
+      <aside class="filters" aria-label="Product filters">
+        <div class="filter-block">
+          <div class="filter-title">Categories</div>
+          <div class="filter-options">
+            <button class="filter-chip is-active" type="button" data-category-filter="All"><span>All</span><span>16</span></button>
+            <button class="filter-chip" type="button" data-category-filter="Clothing"><span>Clothing</span><span>4</span></button>
+            <button class="filter-chip" type="button" data-category-filter="Footwear"><span>Footwear</span><span>4</span></button>
+            <button class="filter-chip" type="button" data-category-filter="Accessories"><span>Accessories</span><span>4</span></button>
+            <button class="filter-chip" type="button" data-category-filter="Lifestyle"><span>Lifestyle</span><span>4</span></button>
+          </div>
+        </div>
+        <div class="filter-block">
+          <div class="filter-title">Maximum price</div>
+          <div class="price-range-wrap">
+            <div class="range-label"><span>Up to</span><strong data-price-value>₱3,000</strong></div>
+            <input type="range" min="500" max="3000" step="100" value="3000" data-price-range aria-label="Maximum product price">
+          </div>
+        </div>
+      </aside>
+
+      <div class="shop-main">
+        <div class="shop-toolbar">
+          <input class="search-input" type="search" placeholder="Search products…" data-shop-search aria-label="Search shop products">
+          <select class="select-input" data-shop-sort aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="az">Name A–Z</option>
+          </select>
+          <span class="result-count" data-product-count>16 products</span>
+        </div>
+        <div class="product-grid" data-shop-grid></div>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+  <div data-site-footer></div>
+</body>
+</html>

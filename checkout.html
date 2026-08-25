@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aurelia checkout prototype.">
+  <title>Checkout — Aurelia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div data-site-header></div>
+  <main>
+    <section class="page-hero"><div class="container"><p class="eyebrow">Secure prototype checkout</p><h1>Checkout</h1><p class="lead">Front-end demonstration only. No real payment or order submission takes place.</p></div></section>
+    <section class="container checkout-layout">
+      <form class="form-stack" data-checkout-form novalidate>
+        <div class="form-section">
+          <h2>Contact Information</h2>
+          <div class="form-grid">
+            <div class="form-field"><label for="checkout-email">Email</label><input class="text-input" id="checkout-email" name="email" type="email" autocomplete="email" required><span class="field-error">Enter a valid email.</span></div>
+            <div class="form-field"><label for="checkout-phone">Phone Number</label><input class="text-input" id="checkout-phone" name="phone" type="tel" autocomplete="tel" required><span class="field-error">Phone number is required.</span></div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Shipping Address</h2>
+          <div class="form-grid">
+            <div class="form-field"><label for="first-name">First Name</label><input class="text-input" id="first-name" name="firstName" autocomplete="given-name" required><span class="field-error">First name is required.</span></div>
+            <div class="form-field"><label for="last-name">Last Name</label><input class="text-input" id="last-name" name="lastName" autocomplete="family-name" required><span class="field-error">Last name is required.</span></div>
+            <div class="form-field full"><label for="street">Street Address</label><input class="text-input" id="street" name="street" autocomplete="street-address" required><span class="field-error">Street address is required.</span></div>
+            <div class="form-field"><label for="city">City</label><input class="text-input" id="city" name="city" autocomplete="address-level2" required><span class="field-error">City is required.</span></div>
+            <div class="form-field"><label for="province">Province/State</label><input class="text-input" id="province" name="province" autocomplete="address-level1" required><span class="field-error">Province/state is required.</span></div>
+            <div class="form-field"><label for="postal">Postal Code</label><input class="text-input" id="postal" name="postal" autocomplete="postal-code" required><span class="field-error">Postal code is required.</span></div>
+            <div class="form-field"><label for="country">Country</label><select class="select-input" id="country" name="country" autocomplete="country-name" required><option value="Philippines">Philippines</option><option value="Singapore">Singapore</option><option value="Malaysia">Malaysia</option></select><span class="field-error">Country is required.</span></div>
+          </div>
+        </div>
+
+        <fieldset class="form-section fieldset-section">
+          <legend><h2>Delivery Method</h2></legend>
+          <div class="choice-list">
+            <label class="choice-card"><input type="radio" name="delivery" value="standard" checked><span><strong>Standard Delivery</strong><span>3–5 business days · Free over ₱2,500</span></span></label>
+            <label class="choice-card"><input type="radio" name="delivery" value="express"><span><strong>Express Delivery</strong><span>1–2 business days · Demo option</span></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section fieldset-section">
+          <legend><h2>Payment Method</h2></legend>
+          <div class="choice-list">
+            <label class="choice-card"><input type="radio" name="payment" value="cod" checked><span><strong>Cash on Delivery</strong><span>Front-end selection only</span></span></label>
+            <label class="choice-card"><input type="radio" name="payment" value="card"><span><strong>Credit/Debit Card</strong><span>No card details are collected in this prototype</span></span></label>
+            <label class="choice-card"><input type="radio" name="payment" value="wallet"><span><strong>E-Wallet</strong><span>Placeholder for future payment integration</span></span></label>
+          </div>
+        </fieldset>
+
+        <button class="btn btn-primary btn-block" type="submit" data-place-order>Place Demo Order</button>
+      </form>
+      <aside class="summary-card" data-checkout-summary aria-label="Checkout order summary"></aside>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+  <div data-site-footer></div>
+</body>
+</html>

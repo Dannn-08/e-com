@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Login to your Aurelia account.">
+  <title>Login — Aurelia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div data-site-header></div>
+  <main class="auth-page">
+    <div class="auth-visual"><img src="images/auth.svg" alt="Minimal neutral lifestyle arrangement"></div>
+    <section class="auth-panel">
+      <div class="auth-card">
+        <p class="eyebrow">Welcome back</p>
+        <h1>Sign in</h1>
+        <p class="lead">Use any valid email and a 6+ character password for the front-end demo.</p>
+        <div class="form-message" data-form-message aria-live="polite"></div>
+        <form class="auth-form" data-login-form novalidate>
+          <div class="form-field"><label for="login-email">Email</label><input class="text-input" id="login-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="form-field"><label for="login-password">Password</label><input class="text-input" id="login-password" name="password" type="password" autocomplete="current-password" required></div>
+          <div class="inline-row"><label class="checkbox-label"><input type="checkbox" name="remember"> Remember Me</label><a class="text-link" href="#forgot">Forgot Password</a></div>
+          <button class="btn btn-primary btn-block" type="submit">Login</button>
+        </form>
+        <p class="auth-switch">Don't have an account? <a href="register.html">Create Account</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+  <div data-site-footer></div>
+</body>
+</html>

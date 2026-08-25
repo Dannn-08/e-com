@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deals — Shopora</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="container">
+  <div class="page-header text-center">
+    <h1>🔥 Today's Deals</h1>
+    <p>Up to 45% off selected items — while stock lasts</p>
+    <div class="countdown" id="countdown" style="justify-content:center;margin:18px 0;">
+      <div class="countdown__unit" id="cdH">00</div><div class="countdown__sep">:</div>
+      <div class="countdown__unit" id="cdM">00</div><div class="countdown__sep">:</div>
+      <div class="countdown__unit" id="cdS">00</div>
+    </div>
+  </div>
+
+  <div class="shop-toolbar">
+    <span class="shop-toolbar__count" id="resultCount"></span>
+    <select class="sort-select" id="sortSelect">
+      <option value="discount">Biggest Discount</option>
+      <option value="price-asc">Price: Low to High</option>
+      <option value="rating">Highest Rated</option>
+      <option value="bestselling">Best Selling</option>
+    </select>
+  </div>
+  <div class="product-grid" id="dealsGrid"></div>
+</main>
+
+<div id="site-footer"></div>
+<div id="mobile-nav"></div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script>
+  function render() {
+    const sort = document.getElementById('sortSelect').value;
+    let items = getProducts().filter(p => p.discount > 0);
+    items = sortProducts(items, sort);
+    document.getElementById('resultCount').textContent = `${items.length} deals available`;
+    renderProductGrid(document.getElementById('dealsGrid'), items);
+  }
+  document.getElementById('sortSelect').addEventListener('change', render);
+  render();
+
+  function updateCountdown() {
+    const now = Date.now();
+    const endOfDay = new Date(); endOfDay.setHours(23, 59, 59, 999);
+    let diff = Math.max(0, endOfDay.getTime() - now);
+    const h = Math.floor(diff / 3600000), m = Math.floor((diff % 3600000) / 60000), s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cdH').textContent = String(h).padStart(2, '0');
+    document.getElementById('cdM').textContent = String(m).padStart(2, '0');
+    document.getElementById('cdS').textContent = String(s).padStart(2, '0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aurelia — minimalist lifestyle and fashion essentials.">
+  <title>Aurelia — Everyday Essentials</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div data-site-header></div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">A quieter way to shop</p>
+          <h1>Simple products. Better everyday living.</h1>
+          <p class="lead">Considered clothing, accessories, footwear, and home essentials selected for comfort, function, and a calm modern aesthetic.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="shop.html">Shop Now</a>
+            <a class="btn btn-secondary" href="#categories">Explore Collection</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="images/hero.svg" alt="Minimal lifestyle collection arranged in a calm neutral interior">
+          <div class="hero-note"><strong>New season, fewer distractions.</strong><br><span class="muted">Everyday pieces made to mix, layer, and last.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Shop by category</p><h2>Built around daily life.</h2></div>
+          <a class="text-link" href="shop.html">View all products →</a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card" href="shop.html?category=Clothing">
+            <img src="images/category-clothing.svg" alt="Minimal clothing collection">
+            <div class="category-card-content"><h3>Clothing</h3><span>Explore →</span></div>
+          </a>
+          <a class="category-card" href="shop.html?category=Accessories">
+            <img src="images/category-accessories.svg" alt="Minimal accessories collection">
+            <div class="category-card-content"><h3>Accessories</h3><span>Explore →</span></div>
+          </a>
+          <a class="category-card" href="shop.html?category=Footwear">
+            <img src="images/category-footwear.svg" alt="Minimal footwear collection">
+            <div class="category-card-content"><h3>Footwear</h3><span>Explore →</span></div>
+          </a>
+          <a class="category-card" href="shop.html?category=Lifestyle">
+            <img src="images/category-lifestyle.svg" alt="Minimal lifestyle collection">
+            <div class="category-card-content"><h3>Lifestyle</h3><span>Explore →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Featured products</p><h2>Essentials worth keeping.</h2></div>
+          <a class="btn btn-secondary" href="shop.html">Shop Collection</a>
+        </div>
+        <div class="product-grid" data-featured-products></div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container promo">
+        <img src="images/promo.svg" alt="A calm neutral interior with everyday essentials">
+        <div class="promo-copy">
+          <p class="eyebrow">The everyday edit</p>
+          <h2>Essentials designed for everyday life.</h2>
+          <p>Useful pieces, balanced proportions, and soft neutral tones—made for the routines that matter most.</p>
+          <a class="btn btn-secondary" href="shop.html">Discover the Edit</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="new-arrivals">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">New arrivals</p><h2>Fresh, understated additions.</h2></div>
+          <a class="btn btn-secondary" href="shop.html?view=new">View All</a>
+        </div>
+        <div class="product-grid" data-new-arrivals></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-strip">
+        <div><p class="eyebrow">About Aurelia</p><h2>Less noise. More thoughtful choices.</h2></div>
+        <div>
+          <p>Aurelia is a front-end prototype for a modern lifestyle and fashion store. The experience is intentionally simple: clear navigation, useful product information, fast interactions, and a visual system that lets the products stay central.</p>
+          <p>The project is structured so authentication, product inventory, checkout, orders, and customer data can later be connected to Firebase, Supabase, or another backend without redesigning the storefront.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+  <div data-site-footer></div>
+</body>
+</html>
